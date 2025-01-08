@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Updation Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Update Your Data</h1>
+        <form action="{% url 'update' sr.id %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="name"> Update Name:</label>
+                <input type="text" id="name" name="name" value="{{sr.std_name}}">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="password">Update Password:</label>
+                <input type="password" id="password" name="password" value="{{sr.std_pass}}" readonly>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="email">Update Email:</label>
+                <input type="email" id="email" name="email" value="{{sr.std_email}}" readonly>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="jo_dt">Join Date:</label>
+                <input type="date" id="jo_dt" name="jo_dt" value="{{sr.std_joindt}}">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="image">Edit Image:</label>
+                <input type="file" id="image" name="image">
+            </div>
+            <br>
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

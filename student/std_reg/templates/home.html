@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body, h1, a {
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+         .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color:#16e67e;
+        }
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            color:black;
+            background-color:peachpuff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #16e67e;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CRUD Operations</h1>
+        <br>
+        <div class="button-group">
+            <a href="/register/" class="btn">Create New Record</a>
+            <a href="/view/" class="btn">View Records</a>
+        </div>
+    </div>
+</body>
+</html>
